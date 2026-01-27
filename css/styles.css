@@ -814,6 +814,16 @@ footer .container {
   transition: all 0.3s ease;
 }
 
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.social-links a i {
+  font-size: 1.2rem;
+}
+
 .social-links a:hover {
   background: var(--accent-yellow);
   color: var(--dark-text);
@@ -822,6 +832,16 @@ footer .container {
 
 .social-links a[href*="linkedin"]:hover {
   background: #0077b5;
+  color: var(--white);
+}
+
+.social-links a[href*="instagram"]:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--white);
+}
+
+.social-links a[href*="whatsapp"]:hover {
+  background: #25d366;
   color: var(--white);
 }
 
