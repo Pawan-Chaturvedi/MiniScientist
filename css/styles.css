@@ -175,6 +175,11 @@ nav {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(2);
 }
 
 .logo-img {
@@ -188,7 +193,7 @@ nav {
 }
 
 .logo-img:hover {
-  transform: scale(1.2);
+  transform: scale(3);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
