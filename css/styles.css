@@ -820,6 +820,11 @@ footer .container {
   transform: translateY(-3px);
 }
 
+.social-links a[href*="linkedin"]:hover {
+  background: #0077b5;
+  color: var(--white);
+}
+
 footer hr {
   border: none;
   height: 1px;
