@@ -1,0 +1,43 @@
+{
+  "name": "mini-scientist",
+  "version": "1.0.0",
+  "description": "Modern website for Mini Scientist - Kids Event Management & Theme Decorations",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "dev": "live-server --port=8000",
+    "build": "echo 'Ready for production deployment'",
+    "test": "echo 'Test suite can be added here'"
+  },
+  "keywords": [
+    "kids-events",
+    "science-parties",
+    "theme-decorations",
+    "children",
+    "birthday-parties",
+    "school-events",
+    "education"
+  ],
+  "author": "Mini Scientist Team",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miniscientist/website"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "optionalDependencies": {
+    "express": "^4.18.0",
+    "axios": "^1.4.0",
+    "razorpay": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

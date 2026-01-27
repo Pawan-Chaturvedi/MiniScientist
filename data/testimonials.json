@@ -1,0 +1,52 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Priya Sharma",
+      "relation": "Parent",
+      "content": "My 8-year-old had the most amazing birthday party! The science show was engaging, and all the kids had fun while learning. Highly recommended!",
+      "rating": 5,
+      "image": "👩‍👧"
+    },
+    {
+      "id": 2,
+      "name": "Ms. Neha Desai",
+      "relation": "School Principal",
+      "content": "The science assembly kept 500 students engaged for the full 45 minutes. Our students were fascinated! Will definitely book again for next year.",
+      "rating": 5,
+      "image": "👨‍🏫"
+    },
+    {
+      "id": 3,
+      "name": "Rajesh Kumar",
+      "relation": "Parent",
+      "content": "Safe, educational, and super fun! The kids still talk about their slime-making experiment. The decoration was perfect for the Harry Potter theme.",
+      "rating": 5,
+      "image": "👨‍👧‍👦"
+    },
+    {
+      "id": 4,
+      "name": "Mrs. Anjali Patel",
+      "relation": "Teacher",
+      "content": "The STEM workshop was perfectly structured. Our students loved the robotics challenge, and it sparked genuine interest in coding. Thank you!",
+      "rating": 5,
+      "image": "👩‍🏫"
+    },
+    {
+      "id": 5,
+      "name": "Aditya's Mom",
+      "relation": "Parent",
+      "content": "Best birthday investment ever! The team was professional, the experiments were age-appropriate, and Aditya's friends are still talking about it.",
+      "rating": 5,
+      "image": "👩‍👦"
+    },
+    {
+      "id": 6,
+      "name": "Mr. Vikram Singh",
+      "relation": "Event Organizer",
+      "content": "Mini Scientist turned our annual school fest into an educational spectacle! The dinosaur theme decoration was absolutely stunning.",
+      "rating": 5,
+      "image": "👨‍💼"
+    }
+  ]
+}

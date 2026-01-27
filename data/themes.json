@@ -1,0 +1,166 @@
+{
+  "themes": [
+    {
+      "id": 1,
+      "name": "Harry Potter Theme",
+      "icon": "🧙‍♂️",
+      "description": "Transform your venue into Hogwarts! Complete with mystical decorations, potion bottles, spell books, wizard hats, and magical lighting effects.",
+      "color": "Purple & Gold",
+      "decorations": [
+        "Spell book centerpieces",
+        "Floating candles",
+        "House banners",
+        "Potion bottles setup",
+        "Wand decorations",
+        "Starry ceiling"
+      ],
+      "customization": "House colors, character cutouts, custom signage available",
+      "ageGroup": "Age 5-14",
+      "price": "₹3,000 - ₹8,000"
+    },
+    {
+      "id": 2,
+      "name": "Unicorn Theme",
+      "icon": "🦄",
+      "description": "A magical rainbow world! Pink, purple, and pastel colors with unicorn horns, clouds, rainbows, flowers, and sparkly decorations.",
+      "color": "Pink, Purple & Rainbow",
+      "decorations": [
+        "Unicorn head centerpieces",
+        "Rainbow balloon arches",
+        "Cloud formations",
+        "Flower arrangements",
+        "Sparkle backdrops",
+        "Pastel balloons"
+      ],
+      "customization": "Custom color schemes, name signs, themed food setup",
+      "ageGroup": "Age 3-10",
+      "price": "₹2,500 - ₹7,000"
+    },
+    {
+      "id": 3,
+      "name": "Dinosaur Theme",
+      "icon": "🦖",
+      "description": "Travel back in time! Prehistoric jungle with dinosaur cutouts, dino eggs, volcano setup, fossil displays, and jungle vines.",
+      "color": "Green, Brown & Orange",
+      "decorations": [
+        "Large dinosaur cutouts",
+        "Volcano centerpiece",
+        "Dino egg props",
+        "Jungle vines & plants",
+        "Rock formations",
+        "Dino footprint trail"
+      ],
+      "customization": "Custom dinosaur types, interactive dino hunt setup",
+      "ageGroup": "Age 4-12",
+      "price": "₹3,000 - ₹8,000"
+    },
+    {
+      "id": 4,
+      "name": "Space/Astronaut Theme",
+      "icon": "🚀",
+      "description": "Blast off to outer space! Rocket ship, planets, astronauts, stars, UFOs, and glow-in-the-dark elements for an intergalactic adventure.",
+      "color": "Black, Blue & Silver",
+      "decorations": [
+        "Large rocket structure",
+        "Planet balloons & cutouts",
+        "Astronaut standees",
+        "Glow stars & effects",
+        "UFO mobile",
+        "Galaxy backdrop",
+        "LED lighting effects"
+      ],
+      "customization": "Custom rocket design, interactive planet setup, astronaut suits",
+      "ageGroup": "Age 5-14",
+      "price": "₹4,000 - ₹10,000"
+    },
+    {
+      "id": 5,
+      "name": "Superhero Theme",
+      "icon": "🦸",
+      "description": "Be a superhero! Character cutouts, power-up stations, city skyline, comic book elements, and heroic decorations.",
+      "color": "Red, Blue & Yellow",
+      "decorations": [
+        "Superhero cutouts (multiple heroes)",
+        "City skyline backdrop",
+        "Comic book speech bubbles",
+        "Power symbols",
+        "Superhero masks setup",
+        "Action-themed props"
+      ],
+      "customization": "Custom hero selection, personalized name capes, photo booth setup",
+      "ageGroup": "Age 4-14",
+      "price": "₹3,000 - ₹8,000"
+    },
+    {
+      "id": 6,
+      "name": "Princess/Fairy Tale Theme",
+      "icon": "👑",
+      "description": "A fairy tale come true! Castle setup, thrones, ball gowns displays, enchanted forest, and magical elements.",
+      "color": "Pink, Gold & White",
+      "decorations": [
+        "Castle gate entrance",
+        "Royal throne setup",
+        "Gown displays",
+        "Enchanted forest trees",
+        "Golden balloons",
+        "Crystal chandeliers",
+        "Red carpet runner"
+      ],
+      "customization": "Specific princess choice, glass slipper props, carriage setup",
+      "ageGroup": "Age 3-10",
+      "price": "₹3,500 - ₹9,000"
+    },
+    {
+      "id": 7,
+      "name": "Sports/Olympic Theme",
+      "icon": "🏆",
+      "description": "Championship celebration! Medal displays, trophy setups, sports equipment, scoreboard, and athlete photos.",
+      "color": "Gold, Silver & Colors",
+      "decorations": [
+        "Olympic rings backdrop",
+        "Medal stands",
+        "Sports equipment display",
+        "Scoreboard setup",
+        "Medal centerpieces",
+        "Flag decorations",
+        "Podium setup"
+      ],
+      "customization": "Specific sport focus, custom medals, personalized jersey display",
+      "ageGroup": "Age 5-14",
+      "price": "₹2,500 - ₹7,500"
+    },
+    {
+      "id": 8,
+      "name": "Pirate/Treasure Hunt Theme",
+      "icon": "🏴‍☠️",
+      "description": "Swashbuckling adventure! Pirate ship, treasure chests, skull & crossbones, wanted posters, and treasure maps.",
+      "color": "Black, Brown & Gold",
+      "decorations": [
+        "Pirate ship structure",
+        "Treasure chest centerpieces",
+        "Wanted posters",
+        "Pirate flags",
+        "Rope decorations",
+        "Gold coins props",
+        "Cannon decorations"
+      ],
+      "customization": "Interactive treasure hunt setup, custom treasure maps, pirate costumes",
+      "ageGroup": "Age 4-12",
+      "price": "₹3,000 - ₹8,500"
+    }
+  ],
+  "themeCategories": [
+    {
+      "name": "Fantasy",
+      "themes": ["Harry Potter Theme", "Unicorn Theme", "Princess/Fairy Tale Theme"]
+    },
+    {
+      "name": "Adventure",
+      "themes": ["Dinosaur Theme", "Pirate/Treasure Hunt Theme"]
+    },
+    {
+      "name": "Sci-Fi & Modern",
+      "themes": ["Space/Astronaut Theme", "Superhero Theme", "Sports/Olympic Theme"]
+    }
+  ]
+}

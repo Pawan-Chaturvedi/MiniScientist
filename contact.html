@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Event - Mini Scientist</title>
+    <meta name="description" content="Book your science event or theme decoration. Fill our online form, call us, or message on WhatsApp. Mini Scientist brings science to your celebration!">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>🧪</span> Mini Scientist
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="science-events.html">Science Events</a></li>
+                <li><a href="theme-decorations.html">Themes</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Book Your Event</h1>
+            <p class="tagline">Let's Create Magic!</p>
+            <p>Transform your celebration into an unforgettable science adventure.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Book an Event</span>
+        </div>
+
+        <!-- Quick Contact -->
+        <section>
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">We're excited to hear about your event!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h4>WhatsApp Chat</h4>
+                    <p>Quick questions? Message us on WhatsApp for instant response.</p>
+                    <a href="https://wa.me/919876543210?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." class="btn btn-whatsapp" style="margin-top: 1rem;">💬 Chat Now</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Phone Call</h4>
+                    <p>Call us to discuss your event in detail. We're happy to help!</p>
+                    <a href="tel:+919876543210" class="btn btn-primary" style="margin-top: 1rem;">📞 +91 98765 43210</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email Us</h4>
+                    <p>Send us details about your event. We'll respond within 24 hours.</p>
+                    <a href="mailto:info@miniscientist.com" class="btn btn-primary" style="margin-top: 1rem;">✉️ Email</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>Visit Us</h4>
+                    <p>Office in Bangalore. Available for consultations by appointment.</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6b7280;">📍 Bangalore, India</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking">
+            <h2>Book Your Event Online</h2>
+            <p class="section-subtitle">Fill this form and we'll get back to you within 24 hours with a custom quote</p>
+            
+            <div style="max-width: 700px; margin: 2rem auto;">
+                <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+                    <!-- Parent Details -->
+                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">📋 Your Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentName">Parent / Organizer Name *</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" placeholder="e.g., Bangalore" required>
+                        </div>
+                    </div>
+
+                    <!-- Event Details -->
+                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎉 Event Details</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select event type</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="school">School Event</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="wedding">Wedding Function</option>
+                                <option value="other">Other Celebration</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Preferred Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guestCount">Number of Children/Guests *</label>
+                            <select id="guestCount" name="guestCount" required>
+                                <option value="">Select count</option>
+                                <option value="5-10">5-10 children</option>
+                                <option value="10-20">10-20 children</option>
+                                <option value="20-30">20-30 children</option>
+                                <option value="30-50">30-50 children</option>
+                                <option value="50+">50+ children</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range *</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget</option>
+                                <option value="5-10k">₹5,000 - ₹10,000</option>
+                                <option value="10-15k">₹10,000 - ₹15,000</option>
+                                <option value="15-25k">₹15,000 - ₹25,000</option>
+                                <option value="25k+">₹25,000+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Child Details (for birthday) -->
+                    <div id="childDetailsSection" style="display: none;">
+                        <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎂 Birthday Child Details</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="childName">Child's Name</label>
+                                <input type="text" id="childName" name="childName">
+                            </div>
+                            <div class="form-group">
+                                <label for="childAge">Child's Age</label>
+                                <input type="number" id="childAge" name="childAge" min="3" max="14">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🧪 Services Required</h3>
+
+                    <div class="form-group">
+                        <label>What services are you interested in? *</label>
+                        <div style="margin-top: 0.75rem;">
+                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="services" value="science-show" style="margin-right: 0.5rem; cursor: pointer;">
+                                🔬 Live Science Show
+                            </label>
+                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="services" value="experiments" style="margin-right: 0.5rem; cursor: pointer;">
+                                🧪 Hands-On Experiments
+                            </label>
+                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="services" value="stem" style="margin-right: 0.5rem; cursor: pointer;">
+                                🎓 STEM Workshop
+                            </label>
+                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="services" value="decoration" style="margin-right: 0.5rem; cursor: pointer;">
+                                🎈 Theme Decoration
+                            </label>
+                            <label style="display: flex; align-items: center; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="services" value="package" style="margin-right: 0.5rem; cursor: pointer;">
+                                🎉 Complete Package
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Theme Selection -->
+                    <div id="themeSection" style="display: none;">
+                        <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎨 Theme Preference</h3>
+
+                        <div class="form-group">
+                            <label for="theme">Preferred Theme</label>
+                            <select id="theme" name="theme">
+                                <option value="">No preference (will discuss)</option>
+                                <option value="harry-potter">🧙‍♂️ Harry Potter</option>
+                                <option value="unicorn">🦄 Unicorn</option>
+                                <option value="dinosaur">🦖 Dinosaur</option>
+                                <option value="space">🚀 Space / Astronaut</option>
+                                <option value="superhero">🦸 Superhero</option>
+                                <option value="princess">👑 Princess / Fairy Tale</option>
+                                <option value="pirate">🏴‍☠️ Pirate</option>
+                                <option value="sports">🏆 Sports / Olympic</option>
+                                <option value="custom">🎨 Custom Theme (will discuss)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details -->
+                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">💬 Additional Information</h3>
+
+                    <div class="form-group">
+                        <label for="venue">Event Venue / Location</label>
+                        <input type="text" id="venue" name="venue" placeholder="e.g., My home, School ground, Community center">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests or Customizations</label>
+                        <textarea id="specialRequests" name="specialRequests" placeholder="Tell us anything specific about your event - custom activities, additional decorations, personalization, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; font-weight: 400; cursor: pointer;">
+                            <input type="checkbox" name="terms" required style="margin-right: 0.5rem; cursor: pointer;">
+                            I agree to the terms and privacy policy
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1.5rem; cursor: pointer;">
+                        Get Custom Quote
+                    </button>
+
+                    <p style="text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 1rem;">
+                        Or contact us directly: <a href="tel:+919876543210">📞 +91 98765 43210</a> | <a href="https://wa.me/919876543210">💬 WhatsApp</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faqs">
+            <h2>Booking FAQs</h2>
+            <p class="section-subtitle">Common questions about booking</p>
+            
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>How soon should I book?</h4>
+                <p>We recommend booking at least 2-3 weeks in advance for better availability. Last-minute bookings (within 1-2 weeks) may be available based on schedule.</p>
+            </div>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>What's your response time?</h4>
+                <p>We respond to all booking inquiries within 24 hours. For WhatsApp messages, we usually reply within 2 hours during business hours.</p>
+            </div>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>Can I book on a specific date?</h4>
+                <p>Yes! We work around your preferred date. Our team coordinates with you to confirm availability and finalize the event schedule.</p>
+            </div>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>What if I need to reschedule?</h4>
+                <p>Rescheduling is possible up to 15 days before your event with no additional charge. After that, a rescheduling fee may apply.</p>
+            </div>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>Do you service areas outside Bangalore?</h4>
+                <p>Yes! We service the greater Bangalore region. Travel charges may apply for locations outside city limits. Contact us for details.</p>
+            </div>
+            <div class="card">
+                <h4>What happens after I submit the form?</h4>
+                <p>We'll review your request and call/WhatsApp you within 24 hours with a personalized quote, availability, and next steps.</p>
+            </div>
+        </section>
+
+        <!-- Process Timeline -->
+        <section>
+            <h2>How Our Booking Process Works</h2>
+            <p class="section-subtitle">From inquiry to event day</p>
+            
+            <div style="max-width: 900px; margin: 2rem auto;">
+                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
+                    <div style="font-size: 2rem; min-width: 60px;">📝</div>
+                    <div>
+                        <h4>Step 1: Fill Booking Form</h4>
+                        <p>Complete the online form with your event details, preferences, and customizations.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
+                    <div style="font-size: 2rem; min-width: 60px;">📞</div>
+                    <div>
+                        <h4>Step 2: We Get Back to You</h4>
+                        <p>Our team calls/messages within 24 hours to discuss details and confirm availability.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
+                    <div style="font-size: 2rem; min-width: 60px;">💰</div>
+                    <div>
+                        <h4>Step 3: Payment & Confirmation</h4>
+                        <p>Make 50% advance payment. Balance due 7 days before the event. Full confirmation sent.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
+                    <div style="font-size: 2rem; min-width: 60px;">🎯</div>
+                    <div>
+                        <h4>Step 4: Final Coordination</h4>
+                        <p>7 days before event, we coordinate details - timing, decorations, any last-minute changes.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                    <div style="font-size: 2rem; min-width: 60px;">🎉</div>
+                    <div>
+                        <h4>Step 5: Event Day!</h4>
+                        <p>Our team arrives, sets up, conducts activities, handles cleanup. You sit back and enjoy!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Let's Make Your Event Magical!</h2>
+            <p>Fill the form above or reach out directly. We're excited to bring science and joy to your celebration!</p>
+            <a href="#booking" class="btn btn-secondary btn-lg">Book Now</a>
+        </section>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-btn" title="Chat with us on WhatsApp">
+        <a href="https://wa.me/919876543210?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." target="_blank">
+            💬
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>About Mini Scientist</h4>
+                <p>We transform children's celebrations into educational adventures where science comes alive, and imagination knows no bounds.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="science-events.html">Science Events</a></li>
+                    <li><a href="theme-decorations.html">Theme Decorations</a></li>
+                    <li><a href="packages.html">Packages & Pricing</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="contact.html">Book an Event</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📧 <a href="mailto:info@miniscientist.com">info@miniscientist.com</a></p>
+                <p>📱 <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p>📍 Bangalore, India</p>
+                <p style="margin-top: 1rem;">
+                    <a href="https://wa.me/919876543210" class="btn btn-whatsapp btn-sm">💬 WhatsApp Us</a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mini Scientist. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script>
+        // Show/hide child details based on event type
+        document.getElementById('eventType').addEventListener('change', function() {
+            document.getElementById('childDetailsSection').style.display = 
+                this.value === 'birthday' ? 'block' : 'none';
+        });
+
+        // Show/hide theme selection based on services
+        document.querySelectorAll('input[name="services"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const showTheme = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+                    .some(c => c.value === 'decoration' || c.value === 'package');
+                document.getElementById('themeSection').style.display = showTheme ? 'block' : 'none';
+            });
+        });
+
+        // Handle booking form submission
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(document.getElementById('bookingForm'));
+            const data = {
+                parentName: formData.get('parentName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                city: formData.get('city'),
+                eventType: formData.get('eventType'),
+                eventDate: formData.get('eventDate'),
+                guestCount: formData.get('guestCount'),
+                budget: formData.get('budget'),
+                childName: formData.get('childName'),
+                childAge: formData.get('childAge'),
+                services: Array.from(document.querySelectorAll('input[name="services"]:checked')).map(c => c.value),
+                theme: formData.get('theme'),
+                venue: formData.get('venue'),
+                specialRequests: formData.get('specialRequests')
+            };
+
+            // Log data (in real app, send to server)
+            console.log('Booking Data:', data);
+
+            // Show success message
+            alert(`Thank you, ${data.parentName}! 🎉\n\nWe've received your booking request. We'll contact you within 24 hours to confirm details and provide a custom quote.\n\nEmail: ${data.email}\nPhone: ${data.phone}`);
+
+            // In a real application, you would send this data to a server
+            // For now, we'll simulate it
+            // window.location.href = `https://wa.me/919876543210?text=Hi! I'm interested in booking a ${data.eventType} event for ${data.eventDate}. Details: ${JSON.stringify(data)}`;
+
+            // Reset form
+            document.getElementById('bookingForm').reset();
+            document.getElementById('childDetailsSection').style.display = 'none';
+            document.getElementById('themeSection').style.display = 'none';
+        }
+
+        // Initialize mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

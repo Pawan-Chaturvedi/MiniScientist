@@ -1,0 +1,126 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "name": "Live Science Shows",
+      "icon": "🔬",
+      "description": "Mind-blowing live demonstrations with interactive experiments that captivate and educate! Watch as dry ice, colorful chemical reactions, and exciting physical experiments come to life right before your eyes.",
+      "ageGroup": "Age 4-14",
+      "duration": "45-60 minutes",
+      "highlights": [
+        "Colorful chemical reactions",
+        "Dry ice demonstrations",
+        "Interactive audience participation",
+        "Safe & certified experiments"
+      ],
+      "safetyNote": "All experiments use non-toxic, child-safe materials. Trained professionals supervise all activities.",
+      "ideal": "School assemblies, birthday parties, events"
+    },
+    {
+      "id": 2,
+      "name": "Hands-On Experiments",
+      "icon": "🧪",
+      "description": "Children become scientists! Each child participates in conducting their own experiments and creating cool projects they can take home.",
+      "ageGroup": "Age 5-14",
+      "duration": "60-90 minutes",
+      "highlights": [
+        "Slime making",
+        "Crystal growing",
+        "Volcano creation",
+        "Magnetic experiments",
+        "Take-home projects"
+      ],
+      "safetyNote": "All materials are food-grade safe. Parental supervision encouraged for younger children.",
+      "ideal": "Birthday parties, small groups, workshops"
+    },
+    {
+      "id": 3,
+      "name": "STEM Workshops",
+      "icon": "🎓",
+      "description": "Structured learning programs combining Science, Technology, Engineering & Mathematics. Build robots, code simple programs, and solve real-world problems.",
+      "ageGroup": "Age 6-14",
+      "duration": "90-120 minutes",
+      "highlights": [
+        "Basic robotics & coding",
+        "Engineering challenges",
+        "Problem-solving tasks",
+        "Team-based activities",
+        "Certificate of participation"
+      ],
+      "safetyNote": "Hands-on guidance provided by experienced STEM instructors.",
+      "ideal": "Schools, summer camps, corporate events"
+    },
+    {
+      "id": 4,
+      "name": "School Science Events",
+      "icon": "🏫",
+      "description": "Customized science day experiences for entire schools. Assembly shows, classroom workshops, and science fair support all included.",
+      "ageGroup": "Age 4-14 (scalable)",
+      "duration": "2-4 hours (customizable)",
+      "highlights": [
+        "Full-day or half-day programs",
+        "Multiple activity stations",
+        "Classroom demonstrations",
+        "Science fair setup support"
+      ],
+      "safetyNote": "School safety protocols followed. All materials certified safe for children.",
+      "ideal": "Schools, annual day celebrations, educational events"
+    },
+    {
+      "id": 5,
+      "name": "Birthday Science Parties",
+      "icon": "🎉",
+      "description": "Make birthday parties unforgettable with science! Combine entertainment, education, and hands-on fun. Perfect for kids who love to learn and play.",
+      "ageGroup": "Age 3-14",
+      "duration": "1-2 hours",
+      "highlights": [
+        "Custom themed shows",
+        "Personalized experiments",
+        "Take-home party favors",
+        "Cake & refreshment space included",
+        "Photo opportunities"
+      ],
+      "safetyNote": "Trained professionals ensure safe, fun experience. All materials are non-toxic.",
+      "ideal": "Birthday parties, small gatherings, celebrations"
+    },
+    {
+      "id": 6,
+      "name": "Science Camps",
+      "icon": "⛺",
+      "description": "Week-long or multi-day intensive science learning experiences. Perfect for summer vacations or school breaks with daily new experiments and activities.",
+      "ageGroup": "Age 5-14",
+      "duration": "Full day (8 hours) or Half day (4 hours)",
+      "highlights": [
+        "Daily new experiments",
+        "Mix of theory & practice",
+        "Fun outdoor activities",
+        "Completion certificate",
+        "Lunch & snacks included"
+      ],
+      "safetyNote": "Comprehensive supervision with trained staff. First aid certified team.",
+      "ideal": "Summer camps, vacations, holiday programs"
+    }
+  ],
+  "activityCategories": [
+    {
+      "name": "Live Science Shows",
+      "icon": "🔬",
+      "description": "Interactive demonstrations"
+    },
+    {
+      "name": "Hands-On Learning",
+      "icon": "🧪",
+      "description": "DIY experiments"
+    },
+    {
+      "name": "STEM Education",
+      "icon": "🎓",
+      "description": "Tech & coding"
+    },
+    {
+      "name": "School Programs",
+      "icon": "🏫",
+      "description": "Full-day events"
+    }
+  ]
+}
