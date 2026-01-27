@@ -250,7 +250,9 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.6) 0%, rgba(192, 132, 252, 0.6) 100%), url('assets/images/BG.JPG') center/cover;
+  background-image: url('../assets/images/BG.jpg');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   color: var(--white);
   padding: 6rem 1rem;
