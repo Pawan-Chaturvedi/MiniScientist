@@ -1,0 +1,420 @@
+/* ===========================
+   BOOKING POPUP STYLES
+   =========================== */
+
+/* Overlay */
+#popupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#popupOverlay.active {
+    display: block;
+}
+
+/* Popup Container */
+#bookingPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 1px rgba(59, 130, 246, 0.5);
+    z-index: 1000;
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+    border: 2px solid rgba(59, 130, 246, 0.1);
+}
+
+#bookingPopup.active {
+    display: block;
+}
+
+/* Popup Header */
+.popup-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    padding: 25px 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.popup-header p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* Close Button */
+#closePopup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+#closePopup:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg);
+}
+
+/* Popup Body */
+.popup-body {
+    padding: 30px 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.popup-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.popup-body::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.popup-body::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Form Group */
+.popup-form-group {
+    margin-bottom: 18px;
+}
+
+.popup-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.popup-form-group label .required {
+    color: #ef4444;
+    margin-left: 3px;
+}
+
+.popup-form-group input,
+.popup-form-group select,
+.popup-form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.popup-form-group input:focus,
+.popup-form-group select:focus,
+.popup-form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.popup-form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.popup-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+/* Form Row - Two columns on larger screens */
+.popup-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.popup-form-row .popup-form-group {
+    margin-bottom: 0;
+}
+
+/* Success Message */
+#popupSuccessMessage {
+    display: none;
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(34, 197, 94, 0.05) 100%);
+    border-radius: 15px;
+}
+
+.success-icon {
+    font-size: 72px;
+    margin-bottom: 20px;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: inline-block;
+}
+
+#popupSuccessMessage h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #059669;
+    margin: 15px 0;
+    letter-spacing: -0.5px;
+}
+
+#popupSuccessMessage p {
+    font-size: 15px;
+    color: #047857;
+    margin: 12px 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+#popupSuccessMessage .success-details {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #10b981;
+    text-align: left;
+    font-size: 14px;
+}
+
+#popupSuccessMessage .success-details p {
+    margin: 8px 0;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+#popupSuccessMessage .success-details span {
+    color: #059669;
+    font-weight: 700;
+}
+
+/* Buttons Container */
+.popup-buttons-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+#submitPopupForm {
+    flex: 1;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+#submitPopupForm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+#submitPopupForm:active {
+    transform: translateY(0);
+}
+
+/* WhatsApp Button */
+#whatsappQuickBooking {
+    flex: 1;
+    padding: 14px 20px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#whatsappQuickBooking:hover {
+    background: #20ba58;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+#whatsappQuickBooking:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 30px)) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #bookingPopup {
+        width: 95%;
+        max-width: none;
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        border-radius: 20px 20px 0 0;
+    }
+
+    #bookingPopup.active {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .popup-header h2 {
+        font-size: 20px;
+    }
+
+    .popup-header p {
+        font-size: 13px;
+    }
+
+    .popup-body {
+        padding: 25px 20px;
+    }
+
+    .popup-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .popup-form-row .popup-form-group {
+        margin-bottom: 18px;
+    }
+
+    .popup-buttons-container {
+        flex-direction: column;
+    }
+
+    #submitPopupForm,
+    #whatsappQuickBooking {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-header {
+        padding: 20px 15px;
+    }
+
+    .popup-header h2 {
+        font-size: 18px;
+    }
+
+    #closePopup {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .popup-body {
+        padding: 20px 15px;
+    }
+
+    .popup-form-group label {
+        font-size: 13px;
+    }
+
+    .popup-form-group input,
+    .popup-form-group select,
+    .popup-form-group textarea {
+        padding: 11px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    #submitPopupForm,
+    #whatsappQuickBooking {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .success-icon {
+        font-size: 48px;
+    }
+
+    #popupSuccessMessage h3 {
+        font-size: 18px;
+    }
+}

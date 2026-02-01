@@ -1,0 +1,128 @@
+<!-- 
+    ============================================
+    BOOKING POPUP HTML
+    ============================================
+    
+    Add this code to EVERY HTML page (index.html, science-events.html, etc.)
+    Place it right before the closing </body> tag
+    
+    Also make sure to:
+    1. Add <link rel="stylesheet" href="css/booking-popup.css"> in the <head>
+    2. Add <script src="js/booking-popup.js"></script> before </body>
+-->
+
+<!-- Popup Overlay -->
+<div id="popupOverlay"></div>
+
+<!-- Booking Popup -->
+<div id="bookingPopup">
+    <!-- Popup Header -->
+    <div class="popup-header">
+        <button id="closePopup" type="button">✕</button>
+        <h2>📌 Book a Fun Science Event!</h2>
+        <p>Fill in your details and we will contact you within 24 hours.</p>
+    </div>
+
+    <!-- Popup Body -->
+    <div class="popup-body">
+        <!-- Form -->
+        <form id="bookingPopupForm">
+            <!-- Full Name -->
+            <div class="popup-form-group">
+                <label for="popupName">
+                    Full Name
+                    <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="popupName" 
+                    name="full_name" 
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <!-- Phone Number & Email -->
+            <div class="popup-form-row">
+                <div class="popup-form-group">
+                    <label for="popupPhone">
+                        Phone Number
+                        <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="popupPhone" 
+                        name="phone" 
+                        placeholder="Enter 10-digit number"
+                        required
+                    >
+                </div>
+                <div class="popup-form-group">
+                    <label for="popupEmail">Email (Optional)</label>
+                    <input 
+                        type="email" 
+                        id="popupEmail" 
+                        name="email" 
+                        placeholder="your@email.com"
+                    >
+                </div>
+            </div>
+
+            <!-- Event Type & Date -->
+            <div class="popup-form-row">
+                <div class="popup-form-group">
+                    <label for="popupEventType">
+                        Event Type
+                        <span class="required">*</span>
+                    </label>
+                    <select id="popupEventType" name="event_type" required>
+                        <option value="">Select an event type</option>
+                        <option value="Birthday Party">🎂 Birthday Party</option>
+                        <option value="School Workshop">🎓 School Workshop</option>
+                        <option value="Theme Decoration">🎨 Theme Decoration</option>
+                        <option value="Corporate Event">🏢 Corporate Event</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popupEventDate">
+                        Preferred Event Date
+                        <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="date" 
+                        id="popupEventDate" 
+                        name="event_date"
+                        required
+                    >
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="popup-form-group">
+                <label for="popupMessage">Message (Optional)</label>
+                <textarea 
+                    id="popupMessage" 
+                    name="message" 
+                    placeholder="Tell us more about your event (number of kids, special requirements, etc.)"
+                ></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="popup-buttons-container">
+                <button type="submit" id="submitPopupForm">✅ Book My Event</button>
+                <button type="button" id="whatsappQuickBooking">
+                    <span>💬 Chat on WhatsApp</span>
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="popupSuccessMessage">
+            <div class="success-icon">✅</div>
+            <h3>Thank You!</h3>
+            <p>Your booking request has been received.</p>
+            <p>Our team will contact you within 24 hours.</p>
+        </div>
+    </div>
+</div>

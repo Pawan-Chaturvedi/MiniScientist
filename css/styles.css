@@ -243,77 +243,507 @@ nav {
   flex-direction: column;
 }
 
-/* Hero Section */
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap');
+
+/* Hero Section - Premium Kids Science Theme */
 .hero {
-  background-image: url('../assets/images/BG.jpg');
+  background-image: 
+    linear-gradient(135deg, rgba(25, 55, 109, 0.4) 0%, rgba(124, 58, 237, 0.3) 50%, rgba(251, 146, 60, 0.2) 100%),
+    url('../assets/images/BG.JPG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: var(--white);
-  padding: 6rem 1rem;
+  padding: 6rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Animated floating elements for magical feel */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 400px;
-  height: 400px;
-  background: rgba(251, 191, 36, 0.1);
+  top: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, transparent 70%);
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+  animation: floatBubble 8s ease-in-out infinite;
 }
 
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -30%;
-  left: -5%;
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.05);
+  bottom: 15%;
+  right: 8%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%);
   border-radius: 50%;
-  animation: float 8s ease-in-out infinite reverse;
+  animation: floatBubble 10s ease-in-out infinite reverse;
 }
 
+/* Additional floating elements */
+.hero .floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: floatBubble 12s ease-in-out infinite;
+}
+
+.hero .floating-element:nth-child(1) {
+  top: 20%;
+  right: 15%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.hero .floating-element:nth-child(2) {
+  top: 60%;
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 2s;
+}
+
+.hero .floating-element:nth-child(3) {
+  top: 40%;
+  right: 25%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 4s;
+}
+
+/* Hero Content Container */
 .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
+  z-index: 10;
+  max-width: 900px;
   margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
 }
 
+/* Main Heading - Impactful and Modern */
 .hero h1 {
-  color: var(--white);
-  margin-bottom: 1rem;
-  animation: slideInDown 0.8s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(0, 0, 0, 0.7),
+    0 0 80px rgba(251, 191, 36, 0.2);
+  animation: 
+    slideInDown 0.8s ease-out,
+    glowPulse 3s ease-in-out infinite alternate;
+  letter-spacing: -0.02em;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 
+.hero h1:hover {
+  transform: translateY(-5px);
+}
+
+/* Tagline - Playful and Eye-catching */
 .tagline {
-  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 600;
   font-style: italic;
-  margin-bottom: 2rem;
-  color: var(--accent-yellow);
-  animation: slideInUp 0.8s ease 0.2s both;
+  margin-bottom: 2.5rem;
+  color: #ffd700;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.95),
+    0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 50px rgba(255, 215, 0, 0.3);
+  animation: 
+    slideInUp 0.8s ease-out 0.2s both,
+    shimmerGlow 4s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
 }
 
+/* Add sparkle effect to tagline */
+.tagline::before {
+  content: '✨';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.tagline::after {
+  content: '✨';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: sparkle 2s ease-in-out infinite 1s;
+}
+
+/* Description Text */
 .hero p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  animation: slideInUp 0.8s ease 0.4s both;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #f8f9fa;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.7);
+  animation: slideInUp 0.8s ease-out 0.4s both;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Enhanced Button Container */
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  animation: slideInUp 0.8s ease 0.6s both;
+  animation: slideInUp 0.8s ease-out 0.6s both;
+}
+
+/* Primary CTA Button - Premium UI/UX Design */
+.hero-buttons .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 15px 35px rgba(102, 126, 234, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+}
+
+/* Premium button shine effect */
+.hero-buttons .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 80%,
+    transparent
+  );
+  transition: left 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Premium button border glow */
+.hero-buttons .btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderRotate 3s linear infinite;
+}
+
+.hero-buttons .btn-primary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 20px 45px rgba(102, 126, 234, 0.6),
+    0 12px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #7c8ff0 0%, #8e5bb4 100%);
+}
+
+.hero-buttons .btn-primary:hover::before {
+  left: 100%;
+}
+
+.hero-buttons .btn-primary:hover::after {
+  opacity: 1;
+}
+
+.hero-buttons .btn-primary:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 10px 25px rgba(102, 126, 234, 0.5),
+    0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary CTA Button - Premium UI/UX Design */
+.hero-buttons .btn-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 15px 35px rgba(240, 147, 251, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+}
+
+/* Premium button shine effect */
+.hero-buttons .btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 80%,
+    transparent
+  );
+  transition: left 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Premium button border glow */
+.hero-buttons .btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #f093fb, #f5576c, #f093fb);
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderRotate 3s linear infinite;
+}
+
+.hero-buttons .btn-secondary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 20px 45px rgba(240, 147, 251, 0.6),
+    0 12px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #f5a7fc 0%, #f66b7c 100%);
+}
+
+.hero-buttons .btn-secondary:hover::before {
+  left: 100%;
+}
+
+.hero-buttons .btn-secondary:hover::after {
+  opacity: 1;
+}
+
+.hero-buttons .btn-secondary:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 10px 25px rgba(240, 147, 251, 0.5),
+    0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* WhatsApp Floating Button - Enhanced */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 10px 25px rgba(37, 211, 102, 0.5),
+    0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: whatsappFloat 3s ease-in-out infinite;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 
+    0 15px 35px rgba(37, 211, 102, 0.7),
+    0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Modern Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-10px) scale(0.95);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 
+      3px 3px 6px rgba(0, 0, 0, 0.8),
+      0 0 30px rgba(251, 191, 36, 0.3),
+      0 0 60px rgba(251, 191, 36, 0.1);
+  }
+  50% {
+    text-shadow: 
+      3px 3px 6px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(251, 191, 36, 0.5),
+      0 0 80px rgba(251, 191, 36, 0.2);
+  }
+}
+
+@keyframes shimmerGlow {
+  0%, 100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.9),
+      0 0 20px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.9),
+      0 0 30px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes whatsappFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Animations */
@@ -986,6 +1416,67 @@ footer hr {
     font-size: 2.5rem;
   }
 
+  .hero {
+    padding: 4rem 1rem;
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .tagline {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .tagline::before,
+  .tagline::after {
+    display: none; /* Hide sparkles on mobile for cleaner look */
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .floating-element {
+    display: none; /* Hide floating elements on mobile */
+  }
+
+  .whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-btn img {
+    width: 28px;
+    height: 28px;
+  }
+
   h2 {
     font-size: 1.875rem;
   }
@@ -1020,6 +1511,11 @@ footer hr {
 
   .hero {
     padding: 4rem 1rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
   }
 
   .hero h1 {
@@ -1078,6 +1574,60 @@ footer hr {
 @media (max-width: 480px) {
   h1 {
     font-size: 1.75rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 85vh;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .tagline {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-btn img {
+    width: 25px;
+    height: 25px;
   }
 
   h2 {

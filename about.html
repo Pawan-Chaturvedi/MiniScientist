@@ -6,6 +6,7 @@
     <title>About Us - Mini Scientist</title>
     <meta name="description" content="Learn about Mini Scientist - our mission, values, team, and commitment to child safety and education.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/booking-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="assets/images/NewLogo.PNG" alt="Mini Scientist Logo" class="logo-img">
+                <img src="assets/images/MiniScientist.PNG" alt="Mini Scientist Logo" class="logo-img">
                 <span>Mini Scientist</span>
             </div>
             <ul class="nav-links" id="navLinks">
@@ -288,7 +289,7 @@
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-btn" title="Chat with us on WhatsApp">
         <a href="https://wa.me/918120757225?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20learn%20more%20about%20your%20company." target="_blank">
-            💬
+            <img src="assets/images/Whatsapp.PNG" alt="WhatsApp" style="width: 100%; height: 100%; object-fit: contain;">
         </a>
     </div>
 
@@ -300,7 +301,7 @@
                 <p>We transform children's celebrations into educational adventures where science comes alive, and imagination knows no bounds.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/mini-scientist-749a493a8" target="_blank" title="LinkedIn"><img src="assets/images/Linkedin.PNG" alt="LinkedIn"></a>
-                    <a href="https://www.instagram.com" target="_blank" title="Instagram"><img src="assets/images/Instagram.PNG" alt="Instagram"></a>
+                    <a href="https://www.instagram.com/miniscientist__/" target="_blank" title="Instagram"><img src="assets/images/Instagram.PNG" alt="Instagram"></a>
                     <a href="https://www.facebook.com" target="_blank" title="Facebook"><img src="assets/images/Facebook.PNG" alt="Facebook"></a>
                     <a href="https://wa.me/918120757225" target="_blank" title="WhatsApp"><img src="assets/images/Whatsapp.PNG" alt="WhatsApp"></a>
                 </div>
@@ -310,7 +311,6 @@
                 <ul>
                     <li><a href="science-events.html">Science Events</a></li>
                     <li><a href="theme-decorations.html">Theme Decorations</a></li>
-                    <li><a href="packages.html">Packages & Pricing</a></li>
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </div>
@@ -324,7 +324,7 @@
             </div>
             <div class="footer-section">
                 <h4>Contact Info</h4>
-                <p>📧 <a href="mailto:miniscientist999@gmail.com">miniscientist999@gmail.com</a></p>
+                <p>📧 <a href="mailto:miniscientist.office@gmail.com">miniscientist.office@gmail.com</a></p>
                 <p>📱 <a href="tel:+918120757225">+91 8120 757225</a></p>
                 <p>📍 Vijay Nagar, Indore M.P.</p>
             </div>
@@ -344,5 +344,128 @@
             e.target.reset();
         }
     </script>
+
+    <!-- Popup Overlay -->
+    <div id="popupOverlay"></div>
+
+    <!-- Booking Popup -->
+    <div id="bookingPopup">
+        <!-- Popup Header -->
+        <div class="popup-header">
+            <button id="closePopup" type="button">✕</button>
+            <h2>📌 Book a Fun Science Event!</h2>
+            <p>Fill in your details and we will contact you within 24 hours.</p>
+        </div>
+
+        <!-- Popup Body -->
+        <div class="popup-body">
+            <!-- Form -->
+            <form id="bookingPopupForm">
+                <!-- Full Name -->
+                <div class="popup-form-group">
+                    <label for="popupName">
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="popupName" 
+                        name="full_name" 
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <!-- Phone Number & Email -->
+                <div class="popup-form-row">
+                    <div class="popup-form-group">
+                        <label for="popupPhone">
+                            Phone Number
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="popupPhone" 
+                            name="phone" 
+                            placeholder="Enter 10-digit number"
+                            required
+                        >
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popupEmail">Email (Optional)</label>
+                        <input 
+                            type="email" 
+                            id="popupEmail" 
+                            name="email" 
+                            placeholder="your@email.com"
+                        >
+                    </div>
+                </div>
+
+                <!-- Event Type & Date -->
+                <div class="popup-form-row">
+                    <div class="popup-form-group">
+                        <label for="popupEventType">
+                            Event Type
+                            <span class="required">*</span>
+                        </label>
+                        <select id="popupEventType" name="event_type" required>
+                            <option value="">Select an event type</option>
+                            <option value="Birthday Party">🎂 Birthday Party</option>
+                            <option value="School Workshop">🎓 School Workshop</option>
+                            <option value="Theme Decoration">🎨 Theme Decoration</option>
+                            <option value="Corporate Event">🏢 Corporate Event</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popupEventDate">
+                            Preferred Event Date
+                            <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="date" 
+                            id="popupEventDate" 
+                            name="event_date"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="popup-form-group">
+                    <label for="popupMessage">Message (Optional)</label>
+                    <textarea 
+                        id="popupMessage" 
+                        name="message" 
+                        placeholder="Tell us more about your event (number of kids, special requirements, etc.)"
+                    ></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="popup-buttons-container">
+                    <button type="submit" id="submitPopupForm">✅ Book My Event</button>
+                    <button type="button" id="whatsappQuickBooking">
+                        <span>💬 Chat on WhatsApp</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="popupSuccessMessage">
+                <div class="success-icon">✅</div>
+                <h3>Booking Submitted Successfully!</h3>
+                <p>Your event booking request has been received.</p>
+                <p style="font-weight: 700; color: #059669; margin-top: 15px;">We will contact you within 24 hours to confirm your booking.</p>
+                <div class="success-details">
+                    <p>💬 <span>You can also chat with us on WhatsApp</span> for instant updates!</p>
+                    <p>📱 <span>Phone:</span> +91 8120 757225</p>
+                    <p>📧 <span>Email:</span> miniscientist.office@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/booking-popup.js"></script>
 </body>
 </html>

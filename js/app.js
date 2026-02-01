@@ -35,7 +35,6 @@ function setupNavigationMenu() {
 // Load content on home page
 function loadHomePageContent() {
     loadActivitiesPreview();
-    loadPackagesPreview();
     loadTestimonials();
 }
 
@@ -61,37 +60,6 @@ function loadActivitiesPreview() {
             </div>
         </div>
     `).join('');
-    
-    container.innerHTML = html;
-}
-
-// Load packages preview on home page
-function loadPackagesPreview() {
-    const container = document.getElementById('packagesPreview');
-    if (!container || !window.packagesData) return;
-
-    // Show birthday packages only
-    const birthdayPackages = window.packagesData.packages
-        .filter(p => p.type === 'birthday')
-        .slice(0, 3);
-    
-    const html = birthdayPackages.map(pkg => {
-        const featured = pkg.featured ? 'featured' : '';
-        return `
-            <div class="package-card ${featured}">
-                ${pkg.featured ? '<div style="background: var(--accent-yellow); color: var(--dark-text); padding: 0.5rem; text-align: center; font-weight: bold; margin: -1.5rem -1.5rem 1rem; border-radius: 10px 10px 0 0;">⭐ MOST POPULAR ⭐</div>' : ''}
-                <h3>${pkg.name}</h3>
-                <p style="color: #6b7280; margin-bottom: 1rem;">${pkg.description}</p>
-                <div class="package-price">${pkg.price}</div>
-                <p style="color: #6b7280; margin-bottom: 1.5rem;">📅 ${pkg.duration}</p>
-                <ul class="package-features">
-                    ${pkg.includes.slice(0, 4).map(item => `<li>${item}</li>`).join('')}
-                    ${pkg.includes.length > 4 ? `<li style="opacity: 0.7;">+ ${pkg.includes.length - 4} more...</li>` : ''}
-                </ul>
-                <a href="packages.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Details</a>
-            </div>
-        `;
-    }).join('');
     
     container.innerHTML = html;
 }
@@ -264,7 +232,6 @@ function getCurrentPage() {
     const path = window.location.pathname;
     if (path.includes('science-events')) return 'science-events';
     if (path.includes('theme-decorations')) return 'themes';
-    if (path.includes('packages')) return 'packages';
     if (path.includes('about')) return 'about';
     if (path.includes('contact')) return 'contact';
     return 'home';
@@ -299,7 +266,6 @@ function prefetchPages() {
     const pages = [
         'science-events.html',
         'theme-decorations.html',
-        'packages.html',
         'about.html',
         'contact.html'
     ];
