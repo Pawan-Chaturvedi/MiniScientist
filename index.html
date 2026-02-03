@@ -36,126 +36,146 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="hero-content">
-            <h1>Where Fun Meets Science & Imagination</h1>
-            <p class="tagline">"Where Fun Meets Science & Imagination"</p>
-            <p>Transform birthday parties, school events, and celebrations into unforgettable learning adventures!</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary btn-lg">Book an Event</a>
-                <a href="#services" class="btn btn-secondary btn-lg">Explore Services</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Fun Science Shows<br>& Experiments for Kids!</h1>
+                    <p>Interactive science activities for<br>schools, birthdays & events.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-primary">Book a Science Show</a>
+                        <a href="#services" class="btn-secondary">View Programs →</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="assets/images/BG.JPG" alt="Kid Scientist" />
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Decorative Elements -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
     </section>
 
     <!-- Main Content -->
     <main class="container">
         <!-- Services Overview Section -->
-        <section id="services">
-            <h2>What We Offer</h2>
-            <p class="section-subtitle">Combining education, entertainment, and unforgettable experiences for children</p>
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>What We Offer</h2>
+                <p class="section-subtitle">Combining education, entertainment, and unforgettable experiences for children</p>
+            </div>
             
-            <div class="row">
-                <div class="service-card">
-                    <h3>🔬 Science Events</h3>
+            <div class="services-grid">
+                <div class="service-card enhanced-card">
+                    <div class="service-icon">
+                        <img src="assets/images/SE.JPG" alt="Science Events" class="service-image" />
+                    </div>
+                    <h3>Science Events</h3>
                     <p>From exciting live shows to hands-on experiments, STEM workshops, and birthday science parties - we bring science to life!</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Live Shows</span>
+                        <span class="feature-tag">STEM Workshops</span>
+                        <span class="feature-tag">Birthday Parties</span>
+                    </div>
                     <a href="science-events.html" class="btn btn-outline">Explore Activities</a>
                 </div>
-                <div class="service-card">
-                    <h3>🎈 Theme Decorations</h3>
+                <div class="service-card enhanced-card">
+                    <div class="service-icon">
+                        <img src="assets/images/HPT.JPG" alt="Theme Decorations" class="service-image" />
+                    </div>
+                    <h3>Theme Decorations</h3>
                     <p>Turn any space into a magical world! Choose from Harry Potter, Unicorn, Dinosaur, Space, Superhero, and more custom themes.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Harry Potter</span>
+                        <span class="feature-tag">Unicorn</span>
+                        <span class="feature-tag">Space Themes</span>
+                    </div>
                     <a href="theme-decorations.html" class="btn btn-outline">View Themes</a>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
-        <section>
-            <h2>Why Choose Mini Scientist?</h2>
-            <p class="section-subtitle">Trust, safety, creativity, and unforgettable memories</p>
-            
-            <div class="features">
-                <div class="feature-item">
-                    <div class="feature-icon">🛡️</div>
-                    <h4>Safe & Certified</h4>
-                    <p>All materials are non-toxic, child-safe, and certified. Professional team trained in child safety protocols.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎓</div>
-                    <h4>Educational Value</h4>
-                    <p>Every activity teaches real science concepts. Learning and fun go hand-in-hand with our curriculum.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✨</div>
-                    <h4>Creative Excellence</h4>
-                    <p>Custom themes, personalized experiences, and attention to detail. Every event is unique and memorable.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⭐</div>
-                    <h4>Professional Team</h4>
-                    <p>Experienced facilitators with backgrounds in education and child engagement. Passionate about inspiring young scientists!</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h4>Affordable Packages</h4>
-                    <p>Flexible pricing for all budgets. Value for money with comprehensive services and unforgettable experiences.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Customizable Options</h4>
-                    <p>Tailor every aspect to your needs. From themes to activities, we customize everything for your event.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Popular Activities Preview -->
-        <section>
-            <h2>Popular Activities</h2>
-            <p class="section-subtitle">Choose from our most loved science experiences</p>
+        <section class="activities-section">
+            <div class="section-header">
+                <h2>Popular Activities</h2>
+                <p class="section-subtitle">Choose from our most loved science experiences</p>
+            </div>
             
-            <div class="row" id="activitiesPreview">
+            <div class="activities-grid" id="activitiesPreview">
                 <!-- Dynamically loaded from JavaScript -->
+            </div>
+            
+            <div class="activities-cta">
+                <a href="#services" class="btn btn-primary">View All Activities</a>
             </div>
         </section>
 
 
         <!-- Testimonials Section -->
-        <section class="testimonial-section">
-            <h2>What Parents & Schools Say</h2>
-            <p class="section-subtitle">Real experiences from real customers</p>
+        <section class="testimonial-section enhanced-testimonial">
+            <div class="section-header">
+                <h2>What Parents & Schools Say</h2>
+                <p class="section-subtitle">Real experiences from real customers</p>
+            </div>
             
             <div class="testimonials-container" id="testimonials">
                 <!-- Dynamically loaded from JavaScript -->
             </div>
+            
+            <div class="testimonial-cta">
+                <a href="contact.html" class="btn btn-secondary">Share Your Experience</a>
+            </div>
         </section>
 
         <!-- Trust & Safety Section -->
-        <section>
-            <h2>Your Child's Safety is Our Priority</h2>
-            <p class="section-subtitle">We follow the highest safety standards</p>
+        <section class="safety-section">
+            <div class="section-header">
+                <h2>Your Child's Safety is Our Priority</h2>
+                <p class="section-subtitle">We follow the highest safety standards</p>
+            </div>
             
-            <div class="features">
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
+            <div class="safety-features">
+                <div class="safety-item">
+                    <div class="safety-icon">✅</div>
                     <h4>Non-Toxic Materials</h4>
                     <p>All experiments use food-grade, safe chemicals. Certified by child safety organizations.</p>
+                    <div class="safety-certification">ISO Certified</div>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔍</div>
+                <div class="safety-item">
+                    <div class="safety-icon">🔍</div>
                     <h4>Child-Safe Experiments</h4>
                     <p>Every experiment is tested and approved for age groups. Professional supervision at all times.</p>
+                    <div class="safety-certification">Age-Appropriate</div>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👨‍🔬</div>
+                <div class="safety-item">
+                    <div class="safety-icon">👨‍🔬</div>
                     <h4>Trained Staff</h4>
                     <p>Our team has first aid certification and extensive experience with children. Passionate educators!</p>
+                    <div class="safety-certification">First Aid Certified</div>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👪</div>
+                <div class="safety-item">
+                    <div class="safety-icon">👪</div>
                     <h4>Parental Involvement</h4>
                     <p>Parents are encouraged to participate and supervise. Create lasting memories together!</p>
+                    <div class="safety-certification">Family Friendly</div>
+                </div>
+                <div class="safety-item">
+                    <div class="safety-icon">🧼</div>
+                    <h4>Hygiene Protocols</h4>
+                    <p>Strict hygiene standards with sanitized equipment and clean workspaces. Health first always!</p>
+                    <div class="safety-certification">Hygienic</div>
+                </div>
+                <div class="safety-item">
+                    <div class="safety-icon">📋</div>
+                    <h4>Safety Guidelines</h4>
+                    <p>Comprehensive safety briefings before each activity. Clear instructions and supervision throughout.</p>
+                    <div class="safety-certification">Safety First</div>
                 </div>
             </div>
         </section>
@@ -208,10 +228,10 @@
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <p>📧 <a href="mailto:miniscientist.office@gmail.com">miniscientist.office@gmail.com</a></p>
-                <p>📱 <a href="tel:+918120757225">+91 8120 757225</a></p>
+                <p>📱 <a href="tel:+918819807008">+91 88198 07008</a></p>
                 <p>📍 Vijay Nagar, Indore M.P.</p>
                 <p style="margin-top: 1rem;">
-                    <a href="https://wa.me/918120757225" class="btn btn-whatsapp btn-sm">WhatsApp Us</a>
+                    <a href="https://wa.me/918819807008" class="btn btn-whatsapp btn-sm">WhatsApp Us</a>
                 </p>
             </div>
         </div>
@@ -339,7 +359,7 @@
                 <p style="font-weight: 700; color: #059669; margin-top: 15px;">We will contact you within 24 hours to confirm your booking.</p>
                 <div class="success-details">
                     <p>💬 <span>You can also chat with us on WhatsApp</span> for instant updates!</p>
-                    <p>📱 <span>Phone:</span> +91 8120 757225</p>
+                    <p>📱 <span>Phone:</span> +91 88198 07008</p>
                     <p>📧 <span>Email:</span> miniscientist.office@gmail.com</p>
                 </div>
             </div>

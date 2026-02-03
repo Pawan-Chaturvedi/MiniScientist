@@ -6,7 +6,7 @@ window.activitiesData = {
     {
       "id": 1,
       "name": "Live Science Shows",
-      "icon": "🔬",
+      "icon": "SS.JPG",
       "description": "Mind-blowing live demonstrations with interactive experiments that captivate and educate! Watch as dry ice, colorful chemical reactions, and exciting physical experiments come to life right before your eyes.",
       "ageGroup": "Age 4-14",
       "duration": "45-60 minutes",
@@ -22,7 +22,7 @@ window.activitiesData = {
     {
       "id": 2,
       "name": "Hands-On Experiments",
-      "icon": "🧪",
+      "icon": "HOE.JPG",
       "description": "Children become scientists! Each child participates in conducting their own experiments and creating cool projects they can take home.",
       "ageGroup": "Age 5-14",
       "duration": "60-90 minutes",
@@ -39,7 +39,7 @@ window.activitiesData = {
     {
       "id": 3,
       "name": "STEM Workshops",
-      "icon": "🎓",
+      "icon": "STEM.JPG",
       "description": "Structured learning programs combining Science, Technology, Engineering & Mathematics. Build robots, code simple programs, and solve real-world problems.",
       "ageGroup": "Age 6-14",
       "duration": "90-120 minutes",
@@ -56,7 +56,7 @@ window.activitiesData = {
     {
       "id": 4,
       "name": "School Science Events",
-      "icon": "🏫",
+      "icon": "SSE.JPG",
       "description": "Customized science day experiences for entire schools. Assembly shows, classroom workshops, and science fair support all included.",
       "ageGroup": "Age 4-14 (scalable)",
       "duration": "2-4 hours (customizable)",

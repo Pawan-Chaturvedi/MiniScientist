@@ -48,7 +48,12 @@ function loadActivitiesPreview() {
     
     const html = previewActivities.map(activity => `
         <div class="activity-card">
-            <div class="card-image">${activity.icon}</div>
+            <div class="card-image">
+                ${activity.icon.endsWith('.JPG') || activity.icon.endsWith('.jpg') || activity.icon.endsWith('.PNG') || activity.icon.endsWith('.png') ? 
+                    `<img src="assets/images/${activity.icon}" alt="${activity.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">` : 
+                    activity.icon
+                }
+            </div>
             <div class="card-content">
                 <h3>${activity.name}</h3>
                 <p class="card-description">${activity.description}</p>

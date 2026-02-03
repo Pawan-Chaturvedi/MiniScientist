@@ -21,7 +21,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="science-events.html">Science Events</a></li>
                 <li><a href="theme-decorations.html">Themes</a></li>
-                <li><a href="packages.html">Packages</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#booking">Book Now</a></li>
             </ul>
@@ -35,11 +34,29 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Book Your Event</h1>
-            <p class="tagline">Let's Create Magic!</p>
-            <p>Transform your celebration into an unforgettable science adventure.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Book Your Event</h1>
+                    <p>Let's Create Magic!<br>Transform Your Celebration.</p>
+                    <div class="hero-buttons">
+                        <a href="#booking" class="btn-primary">Book Now</a>
+                        <a href="#contact" class="btn-secondary">Contact Us →</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="assets/images/ChildBG.PNG" alt="Book Event" />
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Decorative Elements -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
     </section>
 
     <!-- Main Content -->
@@ -59,13 +76,13 @@
                     <div class="contact-icon">📱</div>
                     <h4>WhatsApp Chat</h4>
                     <p>Quick questions? Message us on WhatsApp for instant response.</p>
-                    <a href="https://wa.me/918120757225?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." class="btn btn-whatsapp" style="margin-top: 1rem;">💬 Chat Now</a>
+                    <a href="https://wa.me/918819807008?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." class="btn btn-whatsapp" style="margin-top: 1rem;">💬 Chat Now</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📞</div>
                     <h4>Phone Call</h4>
                     <p>Call us to discuss your event in detail. We're happy to help!</p>
-                    <a href="tel:+918120757225" class="btn btn-primary" style="margin-top: 1rem;">📞 +91 8120 757225</a>
+                    <a href="tel:+918819807008" class="btn btn-primary" style="margin-top: 1rem;">📞 +91 88198 07008</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📧</div>
@@ -83,177 +100,248 @@
         </section>
 
         <!-- Booking Form Section -->
-        <section id="booking">
-            <h2>Book Your Event Online</h2>
-            <p class="section-subtitle">Fill this form and we'll get back to you within 24 hours with a custom quote</p>
+        <section id="booking" class="enhanced-form-section">
+            <div class="section-header">
+                <h2>Book Your Event Online</h2>
+                <p class="section-subtitle">Fill this form and we'll get back to you within 24 hours with a custom quote</p>
+            </div>
             
-            <div style="max-width: 700px; margin: 2rem auto;">
-                <form id="bookingForm" action="https://formspree.io/f/xaqjrwaw" method="POST">
-                    <!-- Parent Details -->
-                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">📋 Your Details</h3>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="parentName">Parent / Organizer Name *</label>
-                            <input type="text" id="parentName" name="parentName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
+            <div class="form-container-enhanced">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Your Details</div>
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City *</label>
-                            <input type="text" id="city" name="city" placeholder="e.g., Bangalore" required>
-                        </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Event Info</div>
                     </div>
-
-                    <!-- Event Details -->
-                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎉 Event Details</h3>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="eventType">Event Type *</label>
-                            <select id="eventType" name="eventType" required>
-                                <option value="">Select event type</option>
-                                <option value="birthday">Birthday Party</option>
-                                <option value="school">School Event</option>
-                                <option value="corporate">Corporate Event</option>
-                                <option value="wedding">Wedding Function</option>
-                                <option value="other">Other Celebration</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="eventDate">Preferred Date *</label>
-                            <input type="date" id="eventDate" name="eventDate" required>
-                        </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Services</div>
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="guestCount">Number of Children/Guests *</label>
-                            <select id="guestCount" name="guestCount" required>
-                                <option value="">Select count</option>
-                                <option value="5-10">5-10 children</option>
-                                <option value="10-20">10-20 children</option>
-                                <option value="20-30">20-30 children</option>
-                                <option value="30-50">30-50 children</option>
-                                <option value="50+">50+ children</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget Range *</label>
-                            <select id="budget" name="budget" required>
-                                <option value="">Select budget</option>
-                                <option value="5-10k">₹5,000 - ₹10,000</option>
-                                <option value="10-15k">₹10,000 - ₹15,000</option>
-                                <option value="15-25k">₹15,000 - ₹25,000</option>
-                                <option value="25k+">₹25,000+</option>
-                            </select>
-                        </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Complete</div>
                     </div>
+                </div>
 
-                    <!-- Child Details (for birthday) -->
-                    <div id="childDetailsSection" style="display: none;">
-                        <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎂 Birthday Child Details</h3>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="childName">Child's Name</label>
-                                <input type="text" id="childName" name="childName">
+                <form id="bookingForm" class="form-enhanced" action="https://formspree.io/f/xaqjrwaw" method="POST">
+                    <!-- Step 1: Parent Details -->
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <div class="step-icon">👤</div>
+                            <h3>Your Contact Information</h3>
+                            <p>Let us know how to reach you</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group enhanced">
+                                <label for="parentName">Parent / Organizer Name *</label>
+                                <input type="text" id="parentName" name="parentName" required>
+                                <span class="input-icon">👤</span>
                             </div>
-                            <div class="form-group">
-                                <label for="childAge">Child's Age</label>
-                                <input type="number" id="childAge" name="childAge" min="3" max="14">
+                            <div class="form-group enhanced">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="input-icon">📧</span>
+                            </div>
+                            <div class="form-group enhanced">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                                <span class="input-icon">📱</span>
+                            </div>
+                            <div class="form-group enhanced">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" placeholder="e.g., Bangalore" required>
+                                <span class="input-icon">📍</span>
                             </div>
                         </div>
+                        
+                        <button type="button" class="btn-next-step" onclick="nextStep(2)">Next Step →</button>
                     </div>
 
-                    <!-- Service Selection -->
-                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🧪 Services Required</h3>
-
-                    <div class="form-group">
-                        <label>What services are you interested in? *</label>
-                        <div style="margin-top: 0.75rem;">
-                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
-                                <input type="checkbox" name="services" value="science-show" style="margin-right: 0.5rem; cursor: pointer;">
-                                🔬 Live Science Show
-                            </label>
-                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
-                                <input type="checkbox" name="services" value="experiments" style="margin-right: 0.5rem; cursor: pointer;">
-                                🧪 Hands-On Experiments
-                            </label>
-                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
-                                <input type="checkbox" name="services" value="stem" style="margin-right: 0.5rem; cursor: pointer;">
-                                🎓 STEM Workshop
-                            </label>
-                            <label style="display: flex; align-items: center; margin-bottom: 0.75rem; font-weight: 400; cursor: pointer;">
-                                <input type="checkbox" name="services" value="decoration" style="margin-right: 0.5rem; cursor: pointer;">
-                                🎈 Theme Decoration
-                            </label>
-                            <label style="display: flex; align-items: center; font-weight: 400; cursor: pointer;">
-                                <input type="checkbox" name="services" value="package" style="margin-right: 0.5rem; cursor: pointer;">
-                                🎉 Complete Package
-                            </label>
+                    <!-- Step 2: Event Details -->
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <div class="step-icon">🎉</div>
+                            <h3>Event Information</h3>
+                            <p>Tell us about your celebration</p>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group enhanced">
+                                <label for="eventType">Event Type *</label>
+                                <select id="eventType" name="eventType" required>
+                                    <option value="">Select event type</option>
+                                    <option value="birthday">🎂 Birthday Party</option>
+                                    <option value="school">🏫 School Event</option>
+                                    <option value="corporate">🏢 Corporate Event</option>
+                                    <option value="wedding">💒 Wedding Function</option>
+                                    <option value="other">🎊 Other Celebration</option>
+                                </select>
+                                <span class="input-icon">🎉</span>
+                            </div>
+                            <div class="form-group enhanced">
+                                <label for="eventDate">Preferred Date *</label>
+                                <input type="date" id="eventDate" name="eventDate" required>
+                                <span class="input-icon">📅</span>
+                            </div>
+                            <div class="form-group enhanced">
+                                <label for="guestCount">Number of Children *</label>
+                                <select id="guestCount" name="guestCount" required>
+                                    <option value="">Select count</option>
+                                    <option value="5-10">👶 5-10 children</option>
+                                    <option value="10-20">👦 10-20 children</option>
+                                    <option value="20-30">👧 20-30 children</option>
+                                    <option value="30-50">👨‍👩‍👧‍👦 30-50 children</option>
+                                    <option value="50+">🎉 50+ children</option>
+                                </select>
+                                <span class="input-icon">👥</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev-step" onclick="prevStep(1)">← Previous</button>
+                            <button type="button" class="btn-next-step" onclick="nextStep(3)">Next Step →</button>
                         </div>
                     </div>
 
-                    <!-- Theme Selection -->
-                    <div id="themeSection" style="display: none;">
-                        <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">🎨 Theme Preference</h3>
-
-                        <div class="form-group">
-                            <label for="theme">Preferred Theme</label>
-                            <select id="theme" name="theme">
-                                <option value="">No preference (will discuss)</option>
-                                <option value="harry-potter">🧙‍♂️ Harry Potter</option>
-                                <option value="unicorn">🦄 Unicorn</option>
-                                <option value="dinosaur">🦖 Dinosaur</option>
-                                <option value="space">🚀 Space / Astronaut</option>
-                                <option value="superhero">🦸 Superhero</option>
-                                <option value="princess">👑 Princess / Fairy Tale</option>
-                                <option value="pirate">🏴‍☠️ Pirate</option>
-                                <option value="sports">🏆 Sports / Olympic</option>
-                                <option value="custom">🎨 Custom Theme (will discuss)</option>
-                            </select>
+                    <!-- Step 3: Services Selection -->
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <div class="step-icon">🧪</div>
+                            <h3>Services & Preferences</h3>
+                            <p>Choose your perfect package</p>
+                        </div>
+                        
+                        <div class="services-selection">
+                            <h4>What services are you interested in? *</h4>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="checkbox" name="services" value="science-show">
+                                    <div class="service-card">
+                                        <div class="service-icon">🔬</div>
+                                        <div class="service-info">
+                                            <h5>Live Science Show</h5>
+                                            <p>Interactive demonstrations</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="checkbox" name="services" value="experiments">
+                                    <div class="service-card">
+                                        <div class="service-icon">🧪</div>
+                                        <div class="service-info">
+                                            <h5>Hands-On Experiments</h5>
+                                            <p>DIY science activities</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="checkbox" name="services" value="stem">
+                                    <div class="service-card">
+                                        <div class="service-icon">🎓</div>
+                                        <div class="service-info">
+                                            <h5>STEM Workshop</h5>
+                                            <p>Educational workshops</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="checkbox" name="services" value="decoration">
+                                    <div class="service-card">
+                                        <div class="service-icon">🎈</div>
+                                        <div class="service-info">
+                                            <h5>Theme Decoration</h5>
+                                            <p>Complete venue setup</p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="service-option">
+                                    <input type="checkbox" name="services" value="package">
+                                    <div class="service-card">
+                                        <div class="service-icon">🎉</div>
+                                        <div class="service-info">
+                                            <h5>Complete Package</h5>
+                                            <p>All services included</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid" style="margin-top: 2rem;">
+                            <div class="form-group enhanced">
+                                <label for="venue">Event Venue / Location</label>
+                                <input type="text" id="venue" name="venue" placeholder="e.g., My home, School ground">
+                                <span class="input-icon">📍</span>
+                            </div>
+                            <div class="form-group enhanced full-width">
+                                <label for="specialRequests">Special Requests or Customizations</label>
+                                <textarea id="specialRequests" name="specialRequests" placeholder="Tell us anything specific about your event..."></textarea>
+                                <span class="input-icon">💬</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev-step" onclick="prevStep(2)">← Previous</button>
+                            <button type="button" class="btn-next-step" onclick="nextStep(4)">Review & Submit →</button>
                         </div>
                     </div>
 
-                    <!-- Additional Details -->
-                    <h3 style="color: var(--primary-blue); margin: 2rem 0 1rem; font-size: 1.25rem;">💬 Additional Information</h3>
-
-                    <div class="form-group">
-                        <label for="venue">Event Venue / Location</label>
-                        <input type="text" id="venue" name="venue" placeholder="e.g., My home, School ground, Community center">
+                    <!-- Step 4: Review & Submit -->
+                    <div class="form-step" data-step="4">
+                        <div class="step-header">
+                            <div class="step-icon">✅</div>
+                            <h3>Review & Submit</h3>
+                            <p>Check your details and submit</p>
+                        </div>
+                        
+                        <div class="review-summary">
+                            <h4>Booking Summary</h4>
+                            <div id="summaryContent" class="summary-content">
+                                <!-- Summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="terms-section">
+                            <label class="terms-label">
+                                <input type="checkbox" name="terms" required>
+                                <span>I agree to the <a href="#" onclick="event.preventDefault(); showTerms()">terms and privacy policy</a></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <button type="button" class="btn-prev-step" onclick="prevStep(3)">← Previous</button>
+                            <button type="submit" class="btn-submit">
+                                <span>🚀 Get Custom Quote</span>
+                                <small>We'll respond within 24 hours</small>
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="specialRequests">Special Requests or Customizations</label>
-                        <textarea id="specialRequests" name="specialRequests" placeholder="Tell us anything specific about your event - custom activities, additional decorations, personalization, etc."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label style="display: flex; align-items: center; font-weight: 400; cursor: pointer;">
-                            <input type="checkbox" name="terms" required style="margin-right: 0.5rem; cursor: pointer;">
-                            I agree to the terms and privacy policy
-                        </label>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1.5rem; cursor: pointer;">
-                        Get Custom Quote
-                    </button>
-
-                    <p style="text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 1rem;">
-                        Or contact us directly: <a href="tel:+918120757225">📞 +91 8120 757225</a> | <a href="https://wa.me/918120757225">💬 WhatsApp</a>
-                    </p>
                 </form>
+
+                <div class="form-help">
+                    <h4>Need Help?</h4>
+                    <p>Prefer to talk directly? We're here to help!</p>
+                    <div class="help-options">
+                        <a href="tel:+918819807008" class="help-option">
+                            <span class="help-icon">📞</span>
+                            <div>
+                                <strong>Call Us</strong>
+                                <small>+91 88198 07008</small>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/918819807008" class="help-option">
+                            <span class="help-icon">💬</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <small>Instant response</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -346,7 +434,7 @@
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-btn" title="Chat with us on WhatsApp">
-        <a href="https://wa.me/918120757225?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." target="_blank">
+        <a href="https://wa.me/918819807008?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20book%20an%20event." target="_blank">
             <img src="assets/images/Whatsapp.PNG" alt="WhatsApp" style="width: 100%; height: 100%; object-fit: contain;">
         </a>
     </div>
@@ -361,7 +449,7 @@
                     <a href="https://www.linkedin.com/in/mini-scientist-749a493a8" target="_blank" title="LinkedIn"><img src="assets/images/Linkedin.PNG" alt="LinkedIn"></a>
                     <a href="https://www.instagram.com/miniscientist__/" target="_blank" title="Instagram"><img src="assets/images/Instagram.PNG" alt="Instagram"></a>
                     <a href="https://www.facebook.com" target="_blank" title="Facebook"><img src="assets/images/Facebook.PNG" alt="Facebook"></a>
-                    <a href="https://wa.me/918120757225" target="_blank" title="WhatsApp"><img src="assets/images/Whatsapp.PNG" alt="WhatsApp"></a>
+                    <a href="https://wa.me/918819807008" target="_blank" title="WhatsApp"><img src="assets/images/Whatsapp.PNG" alt="WhatsApp"></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -383,10 +471,10 @@
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <p>📧 <a href="mailto:miniscientist.office@gmail.com">miniscientist.office@gmail.com</a></p>
-                <p>📱 <a href="tel:+918120757225">+91 8120 757225</a></p>
+                <p>📱 <a href="tel:+918819807008">+91 88198 07008</a></p>
                 <p>📍 Vijay Nagar, Indore M.P.</p>
                 <p style="margin-top: 1rem;">
-                    <a href="https://wa.me/918120757225" class="btn btn-whatsapp btn-sm">💬 WhatsApp Us</a>
+                    <a href="https://wa.me/918819807008" class="btn btn-whatsapp btn-sm">💬 WhatsApp Us</a>
                 </p>
             </div>
         </div>
@@ -397,71 +485,307 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
     <script>
-        // Show/hide child details based on event type
-        document.getElementById('eventType').addEventListener('change', function() {
-            document.getElementById('childDetailsSection').style.display = 
-                this.value === 'birthday' ? 'block' : 'none';
-        });
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing form...');
+            
+            // Multi-Step Form Functionality
+            let currentStep = 1;
+            const totalSteps = 4;
 
-        // Show/hide theme selection based on services
-        document.querySelectorAll('input[name="services"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const showTheme = Array.from(document.querySelectorAll('input[name="services"]:checked'))
-                    .some(c => c.value === 'decoration' || c.value === 'package');
-                document.getElementById('themeSection').style.display = showTheme ? 'block' : 'none';
-            });
-        });
-
-        // Handle booking form submission
-        function handleBookingSubmit(e) {
-            e.preventDefault();
-
-            // Collect form data
-            const formData = new FormData(document.getElementById('bookingForm'));
-            const data = {
-                parentName: formData.get('parentName'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                city: formData.get('city'),
-                eventType: formData.get('eventType'),
-                eventDate: formData.get('eventDate'),
-                guestCount: formData.get('guestCount'),
-                budget: formData.get('budget'),
-                childName: formData.get('childName'),
-                childAge: formData.get('childAge'),
-                services: Array.from(document.querySelectorAll('input[name="services"]:checked')).map(c => c.value),
-                theme: formData.get('theme'),
-                venue: formData.get('venue'),
-                specialRequests: formData.get('specialRequests')
+            // Make functions global
+            window.nextStep = function(step) {
+                console.log('nextStep called with step:', step);
+                console.log('currentStep:', currentStep);
+                
+                if (validateStep(currentStep)) {
+                    console.log('Validation passed');
+                    
+                    const currentStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+                    const currentProgressElement = document.querySelector(`.progress-step[data-step="${currentStep}"]`);
+                    const nextStepElement = document.querySelector(`.form-step[data-step="${step}"]`);
+                    const nextProgressElement = document.querySelector(`.progress-step[data-step="${step}"]`);
+                    
+                    console.log('Elements found:', {
+                        currentStepElement,
+                        currentProgressElement,
+                        nextStepElement,
+                        nextProgressElement
+                    });
+                    
+                    if (currentStepElement && currentProgressElement && nextStepElement && nextProgressElement) {
+                        currentStepElement.classList.remove('active');
+                        currentProgressElement.classList.remove('active');
+                        currentProgressElement.classList.add('completed');
+                        
+                        currentStep = step;
+                        
+                        nextStepElement.classList.add('active');
+                        nextProgressElement.classList.add('active');
+                        
+                        console.log('Step changed to:', currentStep);
+                        
+                        if (currentStep === 4) {
+                            generateSummary();
+                        }
+                        
+                        // Scroll to top of form
+                        document.querySelector('.form-enhanced').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        console.error('Missing elements for step transition');
+                    }
+                } else {
+                    console.log('Validation failed');
+                }
             };
 
-            // Log data (in real app, send to server)
-            console.log('Booking Data:', data);
+            window.prevStep = function(step) {
+                console.log('prevStep called with step:', step);
+                const currentStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+                const currentProgressElement = document.querySelector(`.progress-step[data-step="${currentStep}"]`);
+                
+                if (currentStepElement && currentProgressElement) {
+                    currentStepElement.classList.remove('active');
+                    currentProgressElement.classList.remove('active');
+                    
+                    currentStep = step;
+                    
+                    const nextStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+                    const nextProgressElement = document.querySelector(`.progress-step[data-step="${currentStep}"]`);
+                    
+                    if (nextStepElement && nextProgressElement) {
+                        nextStepElement.classList.add('active');
+                        nextProgressElement.classList.add('active');
+                    }
+                    
+                    // Scroll to top of form
+                    document.querySelector('.form-enhanced').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
 
-            // Show success message
-            alert(`Thank you, ${data.parentName}! 🎉\n\nWe've received your booking request. We'll contact you within 24 hours to confirm details and provide a custom quote.\n\nEmail: ${data.email}\nPhone: ${data.phone}`);
+            window.validateStep = function(step) {
+                console.log('Validating step:', step);
+                const currentStepElement = document.querySelector(`.form-step[data-step="${step}"]`);
+                console.log('Current step element:', currentStepElement);
+                
+                if (!currentStepElement) {
+                    console.error('Step element not found for step:', step);
+                    return false;
+                }
+                
+                const requiredFields = currentStepElement.querySelectorAll('[required]');
+                console.log('Required fields found:', requiredFields.length);
+                
+                // Clear previous error styles
+                currentStepElement.querySelectorAll('input, select, textarea').forEach(field => {
+                    field.style.borderColor = '';
+                });
+                
+                let firstEmptyField = null;
+                for (let field of requiredFields) {
+                    console.log('Checking field:', field.name, 'value:', field.value);
+                    if (!field.value.trim()) {
+                        console.log('Field is empty:', field.name);
+                        field.style.borderColor = '#ef4444';
+                        if (!firstEmptyField) {
+                            firstEmptyField = field;
+                        }
+                    }
+                }
+                
+                if (firstEmptyField) {
+                    // Focus on first empty field and show message
+                    firstEmptyField.focus();
+                    const fieldName = firstEmptyField.name || firstEmptyField.id || 'required field';
+                    const fieldLabel = currentStepElement.querySelector(`label[for="${firstEmptyField.id}"]`) || 
+                                   currentStepElement.querySelector(`label[for="${firstEmptyField.name}"]`);
+                    const labelText = fieldLabel ? fieldLabel.textContent.replace('*', '').trim() : fieldName;
+                    
+                    // Show a more user-friendly message
+                    const message = document.createElement('div');
+                    message.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: #ef4444;
+                        color: white;
+                        padding: 1rem 1.5rem;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                        z-index: 10000;
+                        font-size: 0.9rem;
+                        max-width: 300px;
+                    `;
+                    message.innerHTML = `⚠️ Please fill in: <strong>${labelText}</strong>`;
+                    document.body.appendChild(message);
+                    
+                    // Remove message after 3 seconds
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                            message.parentNode.removeChild(message);
+                        }
+                    }, 3000);
+                    
+                    return false;
+                }
+                
+                // Special validation for services (checkboxes)
+                if (step === 3) {
+                    const checkedServices = document.querySelectorAll('input[name="services"]:checked');
+                    if (checkedServices.length === 0) {
+                        const message = document.createElement('div');
+                        message.style.cssText = `
+                            position: fixed;
+                            top: 20px;
+                            right: 20px;
+                            background: #ef4444;
+                            color: white;
+                            padding: 1rem 1.5rem;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                            z-index: 10000;
+                            font-size: 0.9rem;
+                            max-width: 300px;
+                        `;
+                        message.innerHTML = '⚠️ Please select at least one service';
+                        document.body.appendChild(message);
+                        
+                        setTimeout(() => {
+                            if (message.parentNode) {
+                                message.parentNode.removeChild(message);
+                            }
+                        }, 3000);
+                        
+                        return false;
+                    }
+                }
+                
+                console.log('Validation passed for step:', step);
+                return true;
+            };
 
-            // In a real application, you would send this data to a server
-            // For now, we'll simulate it
-            // window.location.href = `https://wa.me/919876543210?text=Hi! I'm interested in booking a ${data.eventType} event for ${data.eventDate}. Details: ${JSON.stringify(data)}`;
+            window.generateSummary = function() {
+                const formData = new FormData(document.getElementById('bookingForm'));
+                const summaryContent = document.getElementById('summaryContent');
+                
+                const summary = {
+                    'Name': formData.get('parentName'),
+                    'Email': formData.get('email'),
+                    'Phone': formData.get('phone'),
+                    'City': formData.get('city'),
+                    'Event Type': formData.get('eventType'),
+                    'Event Date': formData.get('eventDate'),
+                    'Guest Count': formData.get('guestCount'),
+                    'Venue': formData.get('venue') || 'Not specified'
+                };
+                
+                // Get selected services
+                const services = [];
+                document.querySelectorAll('input[name="services"]:checked').forEach(checkbox => {
+                    const serviceCard = checkbox.nextElementSibling;
+                    const serviceName = serviceCard.querySelector('h5').textContent;
+                    services.push(serviceName);
+                });
+                
+                if (services.length > 0) {
+                    summary['Services'] = services.join(', ');
+                }
+                
+                let summaryHTML = '';
+                for (const [key, value] of Object.entries(summary)) {
+                    if (value) {
+                        summaryHTML += `
+                            <div class="summary-item">
+                                <span class="summary-label">${key}:</span>
+                                <span class="summary-value">${value}</span>
+                            </div>
+                        `;
+                    }
+                }
+                
+                summaryContent.innerHTML = summaryHTML;
+            };
 
-            // Reset form
-            document.getElementById('bookingForm').reset();
-            document.getElementById('childDetailsSection').style.display = 'none';
-            document.getElementById('themeSection').style.display = 'none';
-        }
+            window.showTerms = function() {
+                alert('Terms and Privacy Policy:\n\n1. We respect your privacy and protect your data\n2. Your information is used only for booking purposes\n3. We respond within 24 hours\n4. Prices are subject to availability\n5. Cancellation policy applies\n\nFull terms will be provided with your quote.');
+            };
 
-        // Initialize mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+            // Form submission
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    if (!validateStep(4)) {
+                        e.preventDefault();
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitBtn = document.querySelector('.btn-submit');
+                    const originalContent = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span>⏳ Processing...</span><small>Please wait</small>';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Thank you for your booking request! We will contact you within 24 hours with a custom quote.');
+                        submitBtn.innerHTML = originalContent;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                });
+            }
 
-        if (hamburger) {
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
+            // Add input animations
+            document.querySelectorAll('.form-group.enhanced input, .form-group.enhanced select, .form-group.enhanced textarea').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'scale(1.02)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'scale(1)';
+                });
             });
-        }
+
+            // Service card animations
+            document.querySelectorAll('.service-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    const card = this.querySelector('.service-card');
+                    
+                    if (checkbox.checked) {
+                        card.style.animation = 'pulse 0.5s ease';
+                        setTimeout(() => {
+                            card.style.animation = '';
+                        }, 500);
+                    }
+                });
+            });
+
+            // Add pulse animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Initialize mobile menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            console.log('Form initialization complete');
+        });
     </script>
 
     <!-- Popup Overlay -->
@@ -578,7 +902,7 @@
                 <p style="font-weight: 700; color: #059669; margin-top: 15px;">We will contact you within 24 hours to confirm your booking.</p>
                 <div class="success-details">
                     <p>💬 <span>You can also chat with us on WhatsApp</span> for instant updates!</p>
-                    <p>📱 <span>Phone:</span> +91 8120 757225</p>
+                    <p>📱 <span>Phone:</span> +91 88198 07008</p>
                     <p>📧 <span>Email:</span> miniscientist.office@gmail.com</p>
                 </div>
             </div>

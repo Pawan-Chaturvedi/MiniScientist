@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/booking-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="science-events-page">
     <!-- Header & Navigation -->
     <header>
         <nav class="container">
@@ -34,11 +34,29 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Science Events & Activities</h1>
-            <p class="tagline">From Live Shows to Hands-On Experiments!</p>
-            <p>Ignite curiosity and spark imagination with our scientifically designed activities for children of all ages.</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Science Events & Activities</h1>
+                    <p>From Live Shows to<br>Hands-On Experiments!</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-primary">Book Science Event</a>
+                        <a href="#activities" class="btn-secondary">View Activities →</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="assets/images/SE.JPG" alt="Science Events" />
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Decorative Elements -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
     </section>
 
     <!-- Main Content -->
@@ -49,59 +67,117 @@
         </div>
 
         <!-- Introduction -->
-        <section>
-            <h2>Discover Our Science Activities</h2>
-            <p class="section-subtitle">Each activity is designed to educate, engage, and inspire young scientists</p>
+        <section class="enhanced-introduction">
+            <div class="section-header">
+                <h2>Discover Our Science Activities</h2>
+                <p class="section-subtitle">Each activity is designed to educate, engage, and inspire young scientists</p>
+            </div>
             
-            <p style="text-align: center; font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem;">
-                Our science events combine hands-on learning with pure fun. From thrilling demonstrations to interactive experiments, 
-                every child becomes a scientist and goes home with knowledge, confidence, and unforgettable memories.
-            </p>
+            <div class="intro-content">
+                <p>
+                    Our science events combine hands-on learning with pure fun. From thrilling demonstrations to interactive experiments, 
+                    every child becomes a scientist and goes home with knowledge, confidence, and unforgettable memories.
+                </p>
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🔬</span>
+                        <span>Hands-On Learning</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎓</span>
+                        <span>Educational Fun</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🏆</span>
+                        <span>Unforgettable Memories</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Activities Display -->
-        <section id="activities">
-            <h2>All Our Activities</h2>
-            <p class="section-subtitle">Choose the perfect activity for your event</p>
+        <section id="activities" class="activities-display-section">
+            <div class="section-header">
+                <h2>All Our Activities</h2>
+                <p class="section-subtitle">Choose the perfect activity for your event</p>
+            </div>
             
-            <div id="activitiesContainer" class="row">
+            <div id="activitiesContainer" class="enhanced-activities-grid">
                 <!-- Dynamically loaded from JavaScript -->
             </div>
         </section>
 
         <!-- Activity Categories Info -->
-        <section>
-            <h2>Activity Categories</h2>
-            <p class="section-subtitle">Four main types of science experiences</p>
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>Activity Categories</h2>
+                <p class="section-subtitle">Four main types of science experiences</p>
+            </div>
             
-            <div class="row">
-                <div class="card">
-                    <div class="card-icon">🔬</div>
+            <div class="categories-grid">
+                <div class="category-card enhanced-card">
+                    <div class="category-icon">🔬</div>
                     <h3>Live Science Shows</h3>
                     <p>Mind-blowing demonstrations with colorful reactions, dry ice effects, and interactive audience participation. Perfect for assemblies and events.</p>
-                    <p><strong>Ideal for:</strong> School assemblies, gatherings, large groups</p>
-                    <p><strong>Duration:</strong> 30-60 minutes</p>
+                    <div class="category-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Ideal for:</span>
+                            <span class="detail-value">School assemblies, gatherings, large groups</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">30-60 minutes</span>
+                        </div>
+                    </div>
+                    <div class="category-badge">Most Popular</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🧪</div>
+                <div class="category-card enhanced-card">
+                    <div class="category-icon">🧪</div>
                     <h3>Hands-On Experiments</h3>
                     <p>Children conduct their own experiments - making slime, growing crystals, creating volcanoes. Each child becomes the scientist!</p>
-                    <p><strong>Ideal for:</strong> Birthday parties, small groups, classrooms</p>
-                    <p><strong>Duration:</strong> 60-90 minutes</p>
+                    <div class="category-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Ideal for:</span>
+                            <span class="detail-value">Birthday parties, small groups, classrooms</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">60-90 minutes</span>
+                        </div>
+                    </div>
+                    <div class="category-badge">Kids Favorite</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🎓</div>
+                <div class="category-card enhanced-card">
+                    <div class="category-icon">🎓</div>
                     <h3>STEM Workshops</h3>
                     <p>Structured learning combining Science, Technology, Engineering & Math. Build robots, code, and solve real-world problems.</p>
-                    <p><strong>Ideal for:</strong> Schools, educational programs, camps</p>
-                    <p><strong>Duration:</strong> 90-120 minutes</p>
+                    <div class="category-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Ideal for:</span>
+                            <span class="detail-value">Schools, educational programs, camps</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">90-120 minutes</span>
+                        </div>
+                    </div>
+                    <div class="category-badge">Educational</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🏫</div>
+                <div class="category-card enhanced-card">
+                    <div class="category-icon">🏫</div>
                     <h3>School Science Events</h3>
                     <p>Complete science day experiences with assembly shows, classroom workshops, and multiple activity stations for entire schools.</p>
-                    <p><strong>Ideal for:</strong> Annual events, full-day programs, science fairs</p>
-                    <p><strong>Duration:</strong> 2-4 hours (customizable)</p>
+                    <div class="category-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Ideal for:</span>
+                            <span class="detail-value">Annual events, full-day programs, science fairs</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">2-4 hours (customizable)</span>
+                        </div>
+                    </div>
+                    <div class="category-badge">Comprehensive</div>
                 </div>
             </div>
         </section>
@@ -145,7 +221,6 @@
             </div>
         </section>
 
-
         <!-- CTA Section -->
         <section class="cta-section">
             <h2>Ready to Bring Science to Your Event?</h2>
@@ -187,7 +262,7 @@
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-btn" title="Chat with us on WhatsApp">
-        <a href="https://wa.me/918120757225?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20know%20more%20about%20your%20science%20activities." target="_blank">
+        <a href="https://wa.me/918819807008?text=Hi%20Mini%20Scientist!%20I'd%20like%20to%20know%20more%20about%20your%20science%20activities." target="_blank">
             <img src="assets/images/Whatsapp.PNG" alt="WhatsApp" style="width: 100%; height: 100%; object-fit: contain;">
         </a>
     </div>
@@ -202,7 +277,7 @@
                     <a href="https://www.linkedin.com/in/mini-scientist-749a493a8" target="_blank" title="LinkedIn"><img src="assets/images/Linkedin.PNG" alt="LinkedIn"></a>
                     <a href="https://www.instagram.com/miniscientist__/" target="_blank" title="Instagram"><img src="assets/images/Instagram.PNG" alt="Instagram"></a>
                     <a href="https://www.facebook.com" target="_blank" title="Facebook"><img src="assets/images/Facebook.PNG" alt="Facebook"></a>
-                    <a href="https://wa.me/918120757225" target="_blank" title="WhatsApp"><img src="assets/images/Whatsapp.PNG" alt="WhatsApp"></a>
+                    <a href="https://wa.me/918819807008" target="_blank" title="WhatsApp"><img src="assets/images/Whatsapp.PNG" alt="WhatsApp"></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -224,7 +299,7 @@
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <p>📧 <a href="mailto:miniscientist.office@gmail.com">miniscientist.office@gmail.com</a></p>
-                <p>📱 <a href="tel:+918120757225">+91 8120 757225</a></p>
+                <p>📱 <a href="tel:+918819807008">+91 88198 07008</a></p>
                 <p>📍 Vijay Nagar, Indore M.P.</p>
             </div>
         </div>
@@ -389,7 +464,7 @@
                 <p style="font-weight: 700; color: #059669; margin-top: 15px;">We will contact you within 24 hours to confirm your booking.</p>
                 <div class="success-details">
                     <p>💬 <span>You can also chat with us on WhatsApp</span> for instant updates!</p>
-                    <p>📱 <span>Phone:</span> +91 8120 757225</p>
+                    <p>📱 <span>Phone:</span> +91 88198 07008</p>
                     <p>📧 <span>Email:</span> miniscientist.office@gmail.com</p>
                 </div>
             </div>
