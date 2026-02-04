@@ -182,7 +182,7 @@ class BookingPopup {
             return;
         }
 
-        const phoneNumber = '918120757225'; // Mini Scientist WhatsApp number
+        const phoneNumber = '918819807008'; // Mini Scientist WhatsApp number
         const message = encodeURIComponent(`Hi! I'm ${name || 'interested in booking'} and would like to know more about Mini Scientist events.`);
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 

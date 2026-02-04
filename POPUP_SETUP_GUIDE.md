@@ -119,7 +119,7 @@ The popup includes these fields:
 ```javascript
 - Reads phone number from form input
 - Pre-fills message with visitor's name
-- Opens WhatsApp with: https://wa.me/918120757225
+- Opens WhatsApp with: https://wa.me/918819807008
 - Closes popup after opening WhatsApp
 ```
 
@@ -201,7 +201,7 @@ fetch('https://formspree.io/f/xaqjrwaw', {
 In `js/booking-popup.js`, line 100:
 ```javascript
 // Replace with your WhatsApp number (without +)
-const phoneNumber = '918120757225';
+const phoneNumber = '918819807008';
 ```
 
 ### Change Colors:
