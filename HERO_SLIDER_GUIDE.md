@@ -20,9 +20,9 @@ A modern, fully-functional image slider has been added to your Mini Scientist ho
 ## 🎯 Slider Features
 
 ✅ **3 Image Carousel**
-- BG01.JPG
-- BG02.JPG
-- ChildBG.PNG
+- BG01.jpg
+- BG02.jpg
+- ChildBG.png
 
 ✅ **Auto-Play**
 - Automatically rotates every 4 seconds
@@ -62,9 +62,9 @@ A modern, fully-functional image slider has been added to your Mini Scientist ho
 
 Make sure these images are in your `assets/images/` folder:
 
-1. **BG01.JPG** - First slide image
-2. **BG02.JPG** - Second slide image
-3. **ChildBG.PNG** - Third slide image
+1. **BG01.jpg** - First slide image
+2. **BG02.jpg** - Second slide image
+3. **ChildBG.png** - Third slide image
 
 All images should be at least 1920x600px for best quality on desktop.
 
@@ -100,7 +100,7 @@ All images should be at least 1920x600px for best quality on desktop.
     <!-- Image slides -->
     <div class="hero-slides">
       <div class="hero-slide active">
-        <img src="assets/images/BG01.JPG">
+        <img src="assets/images/BG01.jpg">
       </div>
       <!-- More slides... -->
     </div>
